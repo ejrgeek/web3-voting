@@ -1,0 +1,269 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "option",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "voter",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "votedAt",
+				"type": "uint256"
+			}
+		],
+		"name": "VoteEvent",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "currentVoting",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "createdAt",
+				"type": "uint256"
+			}
+		],
+		"name": "VotingCreatedEvent",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "choice",
+				"type": "uint256"
+			}
+		],
+		"name": "addVote",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "title",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "optionOne",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "imgOptionOne",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "optionTwo",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "imgOptionTwo",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "endDate",
+				"type": "uint256"
+			}
+		],
+		"name": "addVoting",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "currentVoting",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getCurrentVoting",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "optionOne",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "imgOptionOne",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "optionOneVotes",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "optionTwo",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "imgOptionTwo",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "optionTwoVotes",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "endDate",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Voting",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "votes",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "choice",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "date",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "votings",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "title",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "optionOne",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "imgOptionOne",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "optionOneVotes",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "optionTwo",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "imgOptionTwo",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "optionTwoVotes",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "startDate",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "endDate",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
