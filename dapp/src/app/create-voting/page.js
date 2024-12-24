@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 import NextHead from "@/components/NextHead";
 
 import { connectWallet, addVoting } from "@/services/Web3Service";
-import { dateFormatter } from "@/utils/formatters";
+
 
 export default function CreateVoting() {
 

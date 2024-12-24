@@ -22,7 +22,7 @@ contract Web3VotingTest is Test {
     }
 
     /// @dev You cannot create a voting proposal without being the owner of the contract
-    function testFailAddVottingInvalidOwner() public {
+    function testFailAddVotingInvalidOwner() public {
         address otherWallet = address(0x4);
         vm.prank(otherWallet);
         smc.addVoting(

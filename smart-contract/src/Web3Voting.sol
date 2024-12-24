@@ -69,6 +69,7 @@ contract Web3Voting {
         newVoting.imgOptionOne = imgOptionOne;
         newVoting.optionTwo = optionTwo;
         newVoting.imgOptionTwo = imgOptionTwo;
+        newVoting.startDate = block.timestamp;
         newVoting.endDate = (endDate * 1 days) + block.timestamp;
 
         votings.push(newVoting);
